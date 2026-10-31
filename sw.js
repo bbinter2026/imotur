@@ -2,15 +2,15 @@
    - Shell da app em cache para abrir offline
    - Navegação: rede primeiro, cache como reserva
    - Pedidos a outras origens (Supabase, APIs, mapas, etc.) NÃO são interceptados */
-const VERSION = 'imotur-v1';
+const VERSION = 'imotur-v2';
 const SHELL = [
   './',
   './index.html',
   './manifest.webmanifest',
-  './icons/icon-192.png',
-  './icons/icon-512.png',
-  './icons/icon-maskable-512.png',
-  './icons/apple-touch-icon.png'
+  './icon-192.png',
+  './icon-512.png',
+  './icon-maskable-512.png',
+  './apple-touch-icon.png'
 ];
 
 self.addEventListener('install', (e) => {
