@@ -2,7 +2,7 @@
    - Shell da app em cache para abrir offline
    - Navegação: rede primeiro, cache como reserva
    - Pedidos a outras origens (Supabase, APIs, mapas, etc.) NÃO são interceptados */
-const VERSION = 'imotur-v9';
+const VERSION = 'imotur-v10';
 const SHELL = [
   './',
   './index.html',
