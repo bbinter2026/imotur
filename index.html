@@ -399,6 +399,57 @@ footer a[data-bind]::before{width:28px;height:28px;background-size:15px}
 <div id="ab" hidden><b id="who">Modo administrador</b><button data-a="ed">✎ Editar</button><button data-a="rv">Gerir pedidos de reservas</button><button data-a="out">Sair</button></div><div id="ae" hidden><button data-a="np">+ Alojamento</button><button data-a="exa">Inserir apartamento de exemplo</button><button data-a="ns">+ Serviço</button><button data-a="nt">+ Página turismo</button><button data-a="dd">Destinos</button><button data-a="tx">Textos automáticos</button><button data-a="cz">Personalizar e contactos</button><button data-a="us">Gestores</button><button data-a="ex">Cópia de segurança</button></div><div id="bt" hidden><button data-bt="add">+ Novo item</button><button data-bt="del">Eliminar item</button></div><div id="ts" role="status"></div>
 <div class="mo" id="mo" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="md" id="mb"></div></div>
 
+<style id="mobx">
+/* ===== Telemóvel: espaçamento mais compacto e vista organizada ===== */
+@media(max-width:600px){
+body{line-height:1.28}
+h1,h2,h3,h4{line-height:1.15}
+.hero h1{font-size:30px;line-height:1.02;letter-spacing:-1px;margin-bottom:6px}
+.hero p{line-height:1.28;font-size:15px}
+h2{font-size:21px}
+.sub{margin:2px 0 12px;font-size:14px;line-height:1.28}
+section{padding-top:22px!important;padding-bottom:22px!important}
+#destinos{padding-top:0!important}
+.why{display:grid!important;grid-template-columns:1fr 1fr;overflow:visible!important;margin:0!important;padding:0!important;gap:8px}
+.why>*{flex:none!important;max-width:none!important;padding:10px!important;font-size:13px!important;line-height:1.28}
+.dest{display:grid!important;grid-template-columns:1fr 1fr;overflow:visible!important;margin:0!important;padding:0!important;gap:8px}
+.dest>*{flex:none!important;max-width:none!important;height:92px!important;padding:10px!important;font-size:15px!important;line-height:1.15}
+.dest small{font-size:11px;line-height:1.15}
+#grid.grid{display:grid!important;grid-template-columns:1fr 1fr;overflow:visible!important;margin:0!important;padding:0!important;gap:10px}
+#grid.grid>*{flex:none!important;max-width:none!important;min-width:0}
+.card .img{height:104px}
+.cb{padding:9px;gap:2px}
+.cb h3{font-size:14px;line-height:1.15}
+.loc{font-size:12px;line-height:1.2}
+.pr{padding-top:4px;gap:4px;line-height:1.1}
+.pr b{font-size:16px}.pr s{font-size:11px}.pr small{font-size:11px}
+.cb .bt2,.cb .btn{padding:7px 6px!important;font-size:13px!important;margin-top:4px}
+.st,.off{font-size:11px}
+.tot,.cap{font-size:12px;line-height:1.2}
+.hp-top{margin-bottom:10px}
+.hp-top h1{font-size:23px;line-height:1.1}
+.pgb{margin:16px 0 14px!important;gap:8px}
+.crumb{padding:7px 10px!important;font-size:12.5px;gap:6px!important;flex-wrap:wrap;line-height:1.2}
+.hp-grid{display:block}
+.hp-bk{position:static!important;margin-top:12px}
+.hp-sec{padding:13px!important;margin-top:12px!important;border-radius:10px}
+.hp-sec h2{font-size:17px!important;margin:0 0 8px!important}
+.hp-sec p,.hp-sec li{line-height:1.32}
+.hp-sec p{font-size:14px}
+.apt{grid-template-columns:1fr 1fr!important;gap:8px!important;margin-bottom:8px!important}
+.apt>div{padding:8px 10px!important}
+.apt b{font-size:17px!important}
+.apt span{font-size:12px!important;line-height:1.2}
+.hp-am{grid-template-columns:1fr 1fr!important;gap:6px 10px!important}
+.hp-am li{font-size:13px!important;line-height:1.2}
+.hp-map{height:210px!important}
+.aptl{line-height:1.25}
+footer .fg{gap:16px;grid-template-columns:1fr 1fr}
+footer p,footer li,footer a{line-height:1.3}
+.md{padding:16px}
+}
+@media(max-width:360px){#grid.grid{grid-template-columns:1fr!important}.card .img{height:150px}}
+</style>
 <script id="seed" type="application/json">{}</script>
 <script>
 (function(){
@@ -1418,5 +1469,45 @@ icons();onHash();i18nInit();takeSnap();boot();
   document.addEventListener("click",function(e){if(e.target.closest&&e.target.closest("[data-lang]"))setTimeout(label,50)});
 })();
 </script>
+<style id="mob-compact">
+@media(max-width:600px){
+body{line-height:1.3}
+.hero{padding:20px 0 26px}
+.hero h1{font-size:27px;line-height:1.08;letter-spacing:-.8px;margin:0 0 6px}
+.hero p{font-size:14px;line-height:1.3}
+.tabs{margin-top:12px;gap:6px}.tabs a{padding:5px 12px;font-size:13px;line-height:1.2}
+.sb{margin-top:16px;gap:3px}.sb>*{min-height:44px;padding:6px 10px}
+.sb label{font-size:10.5px;line-height:1.1}.sb input,.sb .gt{font-size:14.5px;line-height:1.2;padding:1px 0}
+.sb .go{min-height:46px}
+.dsum{margin-top:8px;font-size:13px;line-height:1.25}
+.why{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px;align-items:start}.why>*{padding:10px 12px;font-size:13px;line-height:1.25}.why b{margin-bottom:2px}
+section{padding-top:22px;padding-bottom:22px}
+section h2{font-size:20px;line-height:1.15;margin:0 0 4px}
+section .sub,.sub{font-size:13.5px;line-height:1.25;margin:0 0 12px}
+.dest{gap:8px}.dest button{height:84px;padding:10px;font-size:15px;line-height:1.15}.dest small{font-size:11px;line-height:1.2;margin-top:2px}
+.bar{gap:8px;margin-bottom:10px}.bar select{font-size:14px;padding:8px}
+#fbtn{padding:8px 16px;font-size:14px}
+#cnt,#rt+*{line-height:1.2}
+#grid.grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:10px;overflow:visible!important;margin:0!important;padding:0!important;scroll-snap-type:none!important}
+#grid.grid>*{flex:none;max-width:none;width:auto}
+#grid .card{flex-direction:row;align-items:stretch;border-radius:10px}
+#grid .card .img{width:40%;flex:none;height:auto;min-height:176px}
+#grid .card .st{top:8px;right:8px;padding:2px 7px;font-size:12px}
+#grid .card .hr{top:8px;left:8px;width:30px;height:30px;font-size:16px}
+#grid .card .off{left:8px;bottom:8px;font-size:11px;padding:2px 6px}
+#grid .card .cb{min-width:0;padding:10px;gap:2px;justify-content:center}
+#grid .card .cb h3{font-size:15px;line-height:1.15}
+#grid .card .loc{font-size:12px;line-height:1.2}
+#grid .card .pr{padding-top:4px;gap:4px;line-height:1.1}#grid .card .pr b{font-size:17px}#grid .card .pr s{font-size:12px}#grid .card .pr small{font-size:11px}
+#grid .card .tot{font-size:12px;line-height:1.2}
+#grid .card .bt2{padding:7px 10px;font-size:13px;margin-top:6px;line-height:1.2}
+#grid .card .btn{padding:8px 10px;font-size:13px;margin-top:5px;line-height:1.2}
+#grid .card .ac button{padding:6px;font-size:12px}
+.hp-top h1{font-size:22px;line-height:1.1}
+.hp-sec{padding:12px}.hp-sec h2{font-size:17px;line-height:1.15;margin:0 0 6px}.hp-sec p,.hp-sec li{line-height:1.35}
+.apt{gap:8px}.apt>div{padding:8px 10px}
+footer .fd{line-height:1.35}.fg a{line-height:1.2}
+}
+</style>
 </body>
 </html>
